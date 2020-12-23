@@ -1,5 +1,4 @@
-# Blog_Project
-###### ver2.0
+# Blog_Project ###### ver2.0
 
  Add about menu, snow effect
 
