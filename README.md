@@ -4,12 +4,12 @@
 
 
 ### 기술 스택
- §Server-side
-   python3
-   MongoDB
-   jinja2
-   AWS
-   EC2 t2 micro
+#### §Server-side
+   ##### python3
+   ##### MongoDB
+   ##### jinja2
+   ##### AWS
+   ##### EC2 t2 micro
    
 ### 문서화
   EC2 환경(env) 설정이 필요 (vi ~/.profile)
