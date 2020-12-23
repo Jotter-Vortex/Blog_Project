@@ -1,7 +1,7 @@
 # Blog_Project
 ##### ver2.0
-http://changjin.me
- Add about menu, snow effect
+[chang blog](http://changjin.me){:target="_blank"}
+###### Add about menu, snow effect
 
 
 
