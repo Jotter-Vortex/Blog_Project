@@ -1,5 +1,4 @@
 # [Blog_Project](http://changjin.me/)
-## 눌러보세요
 
 ##### ver2.0 : Add about menu, snow effect
 ##### ver2.1 : upper menu fixed
