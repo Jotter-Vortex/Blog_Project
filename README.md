@@ -1,9 +1,8 @@
-# Blog_Project
-##### ver2.0
+# [Blog_Project](http://changjin.me/)
 
-[chang blog](http://changjin.me/)
+##### ver2.0 : Add about menu, snow effect
+##### ver2.1 : upper menu fixed
 
-###### Add about menu, snow effect
 
 
 
