@@ -4,11 +4,21 @@ import requests
 from bs4 import BeautifulSoup
 from pymongo import MongoClient                 # pymongo를 import하기
 import datetime                                     # 현재 시간을 가져오기 위함.
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
 client = MongoClient('mongodb://changjin:0001@13.209.47.213', 27017)        # mongoDB는 27017 포트로 돌아감
 db = client.my_invent                            # 'notepad'라는 이름의 db를 생성함
+## 이메일기능을 담당하는 부분
+mail = Mail(app)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USERNAME'] = 'jottervortex@gmail.com'
+app.config['MAIL_PASSWORD'] = 'rosua!@345'
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+mail = Mail(app)
 
 ## HTML을 주는 부분
 @app.route('/')                                 # home 주소
@@ -116,6 +126,21 @@ def post_notepad():
     return jsonify({'result': 'success'})
     #, 'msg':'POST 연결되었습니다!'})
 
+
+## email
+@app.route('/contact_email', methods=['POST'])
+def contact_email() :
+    # 1. 클라이언트로부터 데이터를 받기
+    uname = request.form['name']  # 클라이언트로부터 name을 받을 부분
+    uemail = request.form['email']  # 클라이언트로부터 email을  받을 부분
+    uphone = request.form['phone']  # 클라이언트로부터 phone를 받을 부분
+    umessage = request.form['message']  # 클라이언트로부터 message를  받을 부분
+    emailbody="이름 : "+uname+"\n이메일 : "+uemail+"\n폰번호 : "+uphone+"\n메시지 : "+umessage
+    print(emailbody)
+    msg = Message('changjin.me', sender='jottervortex@gmail.com', recipients=['jottervortex@gmail.com'])
+    msg.body = emailbody
+    mail.send(msg)
+    return jsonify({'result': 'success'})
 
 
 if __name__ == '__main__':
