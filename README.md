@@ -3,6 +3,7 @@
 ##### ver2.0 : Add about menu, snow effect
 ##### ver2.1 : upper menu fixed
 ##### ver2.2 : mobile optimization
+##### ver2.2 : Add board posting
 
 
 
