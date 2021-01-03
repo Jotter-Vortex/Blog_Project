@@ -6,7 +6,8 @@
 ##### ver2.3 : Add board posting
 
 
-
+There is no uploaded server.
+If you Utilize this, please contact me.
 
 
 ###### * 기술 스택
